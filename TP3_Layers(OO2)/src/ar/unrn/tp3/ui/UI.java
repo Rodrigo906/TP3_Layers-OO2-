@@ -4,7 +4,6 @@ import java.awt.ComponentOrientation;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -59,8 +58,6 @@ public class UI extends JFrame {
 				try {
 					repositorioClientes
 							.registrarCliente(new Cliente(nombre.getText(), telefono.getText(), region.getText()));
-				} catch (SQLException e1) {
-					JOptionPane.showMessageDialog(VentanaActual, e1.getMessage());
 				} catch (RuntimeException e2) {
 					JOptionPane.showMessageDialog(VentanaActual, e2.getMessage());
 				}
